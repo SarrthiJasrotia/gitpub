@@ -14,8 +14,24 @@ app.get("/drinks",(req,res)=>{
 })
 
 app.get("/drinks/:id",(req,res)=>{
-    res.send(req.params.id)
+    res.render("drinks_show.ejs",{
+        drinks: drinks[req.params.id]
+    })
 })
+
+
+app.get("/food",(req,res)=>{
+    res.render("food_index.ejs",{
+        allFood: food
+    })
+})
+
+app.get("/drinks/:id",(req,res)=>{
+    res.render("drinks_show.ejs",{
+        drinks: drinks[req.params.id]
+    })
+})
+
 
 app.listen(3000, () => {
     console.log("Its working")
