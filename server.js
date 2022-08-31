@@ -7,7 +7,13 @@ app.get("/", (req,res)=>{
 
 })
 
-app.get(":/")
+app.get("/drinks",(req,res)=>{
+    res.render("drinks_index.ejs")
+})
+
+app.get("/drinks/:id",(req,res)=>{
+    res
+})
 
 app.listen(3000, () => {
     console.log("Its working")
