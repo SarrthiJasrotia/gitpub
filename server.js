@@ -13,9 +13,9 @@ app.get("/drinks",(req,res)=>{
     })
 })
 
-// app.get("/drinks/:id",(req,res)=>{
-//     res
-// })
+app.get("/drinks/:id",(req,res)=>{
+    res.send(drinks[req.params.id])
+})
 
 app.listen(3000, () => {
     console.log("Its working")
